@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ./logs:/var/log/nginx
+
+networks:
+  default:
+    external:
+      name: matcha-network
