@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
 
-  nginx:
+  router:
     build: .
     ports:
       - 80:80
     volumes:
       - ./logs:/var/log/nginx
-      - /home/matcha/matcha-service-front/app/static:/front/static
 
 networks:
   default:
